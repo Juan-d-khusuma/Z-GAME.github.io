@@ -1,0 +1,260 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:'Poppins', sans-serif;;
+}
+
+.nav-logo
+{
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-logo img
+{
+    width: 60px;
+}
+
+.nav-logo h1
+{
+    font-weight: medium;
+    display: inline;
+}
+
+.logo-name
+{
+    width: auto;
+    height: 10px;
+}
+
+.navbar
+{
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #ddd;
+    box-shadow: 3px 1px 8px #000000;
+    z-index: 10;
+}
+
+.nav-container
+{
+    position: relative;
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-link
+{
+    color: black;
+    display: inline-block;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    text-align: center;
+}
+
+.nav-link:focus
+{
+    box-shadow: 1px 1px 3px black inset, -4px -4px 3px white inset;
+}
+
+.item-underline
+{
+    position: relative;
+    background: white;
+    height: 2px;
+    width: 0%;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover + .item-underline
+{
+    position: relative;
+    width: 100%;
+}
+
+.nav-link:hover
+{
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.expand-navbar
+{
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    display: none;
+    background-color: #ddd;
+    box-shadow: 2px 1px 5px #aaa, -2px -1px 7px #fff;
+    transition: all 0.3s ease;
+}
+
+.expand-navbar:active
+{
+    box-shadow: 2px 1px 5px #aaa inset, -2px -1px 7px #fff inset;
+}
+
+.pop-up-navbar
+{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    transition: all 0.5s ease;
+    z-index: 20;
+    background: white;
+    left: -50%;
+}
+
+.hide-navbar
+{
+    color: white;
+}
+
+.main-content
+{
+    padding: 15px;
+    position: relative;
+    top: 80px;
+    height: 700px;
+    background: lightgray;
+    border-bottom: 2px solid #c3c3c3;
+    box-shadow: 0 4px 10px gray;
+}
+
+.home img
+{
+    position: relative;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+}
+
+.hero-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.hero-link
+{
+    text-align: center;
+}
+
+.hero-link a
+{
+    color: white;
+    background: rgb(6, 136, 223);
+    padding: 5px;
+    border: 2px solid #00000000;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px blue, -3px -3px 10px lightblue;
+    transition: 0.3s ease-in;
+}
+
+.hero-link a:focus
+{
+    box-shadow: 3px 3px 5px blue inset, -3px -3px 5px lightblue inset;
+}
+
+@media(max-width: 580px)
+{
+    .navbar
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-container
+    {
+        display: none
+    }
+    
+    .nav-logo
+    {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .expand-navbar
+    {
+        display: inline-block;
+    }
+
+    .hide-navbar
+    {
+        display: inline-block;
+        color: black;
+        transition: all 0.2s ease-out;
+    }
+
+    .hero-image
+    {
+        width: 400px;
+    }
+}
+
+.cta
+{
+    background: skyblue;
+    color: white;
+}
+
+.main-header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media(min-width: 800px)
+{
+    .hero-text
+    {
+        font-size: 30px;
+    }
+
+    .hero-image img
+    {
+        width: 400px
+    }
+}
+
+.about
+{
+    position: absolute;
+    top: 780px;
+}
+
+
+@madia(max-width: 512px)
+{
+    .hero-image img
+    {
+        width: 50px
+    }
+}
